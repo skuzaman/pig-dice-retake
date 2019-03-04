@@ -1,0 +1,46 @@
+#column{
+margin-right:5em;
+
+}
+
+#container{
+  margin-right:20%;
+  margin-left:20%;
+}
+#all{
+  display: flex;
+  flex-direction:row;
+
+}
+.shown{
+  display:none;
+}
+#shown{
+  display:none;
+}
+body{
+  background-image:url("https://cdn57.androidauthority.net/wp-content/uploads/2018/09/android-authority-google-pixel-3-live-wallpaper-blue.jpg" );
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-size:20px;
+}
+#touch{
+  padding:20px;
+}
+#colum{
+  display:flex;
+  flex-direction: row;
+  margin-left:100px;
+}
+p{
+  color:yellow;
+}
+.green{
+color:black ;
+}
+#reduce{
+  border-radius:400px;
+}
+.move{
+  text-align:center;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+  <link href="css/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <title>pig-dice</title>
+  <body>
+      <form class="doIt">
+      <div id="container">
+        <div id="rep">
+
+
+    <h1 class="jumbotron" id="reduce" >OINKY!!  PIG-DICE</h1>
+    <span class="super">
+    <p>Let's get to know our lucky contestants first:</p>
+
+    <span>
+      <div id="all">
+   <div class="jumbotron" id="column">
+      <img src="https://cdna.artstation.com/p/assets/images/images/011/471/494/large/luca-patane-img-20180623-104654-201.jpg?1529753828" height=240>
+
+      <br>Mastermind<input required type="name" id="one"></br>
+    </div>
+       <div class="jumbotron">
+      <img src="https://diversesurf.com.au/wp-content/gallery/model-logos/pp.jpg" height=200>
+
+      <br>Worthy opponent<input required type="name" id="two"></br>
+    </div>
+  </div>
+    <div>
+      <button type="submit" class="hidden">Play Game!</button>
+      <button type="reset">Clear names</button>
+      <button type="button" id="help">Help</button>
+    </div>
+      </div>
+
+    <div id="shown" >
+      <h1>NEED HELP??</h1>
+       <p class="green">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+         <div class="jumbotron">
+      <ul>
+        <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+    <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+    <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+    <li>The first player to score 100 or more points wins.</li>
+    </ul>
+    </div>
+    <div class="jumbotron">
+    <p class="green">For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.</p>
+    <button type="button" class="back">Back</button>
+  </div>
+      </div>
+
+      <div id="link" class="shown">
+
+        <span class="move"><h1>Now let's get to business</h1></span>
+        <div id="colum">
+          <div id="touch">
+          <p id="sort"></p>
+          <script src="scripts.js"></script>
+          <br><img src="https://cdna.artstation.com/p/assets/images/images/011/471/494/large/luca-patane-img-20180623-104654-201.jpg?1529753828" height=120></br>
+        </div>
+        <div id="touch">
+          <button type="button" onclick="tri()" id="hold">hold</button>
+          <button type="button" onclick="trial()">Roll dice</button>
+          <br><button type="button" class="back">Re-start</button></br>
+        </div>
+        <br><div id="find">
+
+        </div></br>
+        <div id="touch">
+         <p id="short"></p>
+          <script src="scripts.js"></script>
+          <br><img src="https://diversesurf.com.au/wp-content/gallery/model-logos/pp.jpg" height=120></br>
+          <script src="js/jquery-3.3.1.js"></script>
+          <script src="js/script.js"></script>
+        </div>
+        </div>
+      </div>
+    </div>
+    </form>
+      </body>
+</html>
