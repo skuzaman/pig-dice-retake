@@ -19,13 +19,14 @@ margin-right:5em;
   display:none;
 }
 *{
-    font-family: 'Lobster', cursive;
+
+font-family: 'Rancho', cursive;
 }
 body{
   background-image:url("https://cdn57.androidauthority.net/wp-content/uploads/2018/09/android-authority-google-pixel-3-live-wallpaper-blue.jpg" );
   background-repeat:no-repeat;
   background-size:cover;
-  font-size:20px;
+  font-size:35px;
 
 }
 #make{
