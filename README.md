@@ -1,8 +1,8 @@
 # Pig dice
-#### The best way to find out how well you fair in js content.
+#### A game typically made for the fun of things.
 #### By **{Eddy Yonnie}**
-## Descri-------ption
-* This is a programme that prompts the user to answer by choosing from the multiple choices provided.IT also informs the user of the test's oMIT License
+## Description
+*
 
 
 ## Setup/Installation Requirements
