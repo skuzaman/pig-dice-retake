@@ -37,12 +37,13 @@ $(document).ready(function() {
     $("#cha").attr("disabled", true);
     $("#chan").attr("disabled", false);
     $("#chang").attr("disabled", true);
-    $("#change").attr("disabled", false);
+    // $("#change").attr("disabled", false);
   })
 
   $('#chan').click(function(){
     random2();
     document.getElementById('round2').innerHTML = twoTurnScore;
+    $("#change").attr("disabled", false);
   })
 
   $('#change').click(function(){
@@ -55,7 +56,7 @@ $(document).ready(function() {
     $("#chan").attr("disabled", true);
     $("#cha").attr("disabled", false);
     $("#change").attr("disabled", true);
-    $("#chang").attr("disabled", false);
+    // $("#chang").attr("disabled", false);
   })
 })
 
@@ -91,7 +92,7 @@ function random1(){
       $("#cha").attr("disabled", true);
       $("#chan").attr("disabled", false);
       $("#chang").attr("disabled", true);
-      $("#change").attr("disabled", false);
+      // $("#change").attr("disabled", false);
     })
   }
 }
@@ -115,7 +116,7 @@ function random2(){
     var sum2 = 0;
     $(document).ready(function(){
       $("#change").attr("disabled", true);
-      $("#chang").attr("disabled", false);
+      // $("#chang").attr("disabled", false);
       $("#chan").attr("disabled", true);
       $("#cha").attr("disabled", false);
     })
