@@ -3,6 +3,7 @@
 #### By **{Eddy Yonnie}**
 ## Description
 * In this game the dice is rolled continuously and the game broken only when the other player's turn comes in.
+This situation is achieved when a player attains a value of one or presses hold.
 
 
 ## Setup/Installation Requirements
