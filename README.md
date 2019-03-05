@@ -2,7 +2,7 @@
 #### A game typically made for the fun of things.
 #### By **{Eddy Yonnie}**
 ## Description
-*
+* In this game the dice is rolled continuously and the game broken only when the other player's turn comes in.
 
 
 ## Setup/Installation Requirements
