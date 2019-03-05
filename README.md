@@ -25,7 +25,7 @@ This situation is achieved when a player attains a value of one or presses hold.
 * Bootstrap
 * Jquery
 ## Link to live site on the output of the project
-
+https://eddyyonnie.github.io/pig-dice/
 #### Contacts for further informing on the test system:
 * phone-number: 0790538630
 * email: eddyyonnie@gmail.com
