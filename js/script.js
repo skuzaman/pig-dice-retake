@@ -1,173 +1,172 @@
 //UI logic
-$(document).ready(function() {
-  $(".doIt").submit(function(event){
-    event.preventDefault();
-    var input1 = $("#one").val();
-    $("#sort").text(input1);
-    var input2 = $("#two").val();
-    $("#short").text(input2);
-    $(".shown").slideDown();
-    $("#rep").slideUp();
-  });
-  $(".back").click(function(){
-    $(".shown").slideUp();
-    $("#shown").slideUp();
-    $("#rep").slideDown();
-  })
-  $("#help").click(function(){
-    $("#shown").slideDown();
-    $("#rep").slideUp();
-    $(".shown").hide();
-  })
 
-  $('#cha').click(function(){
-    random1();
-    gather1();
-    document.getElementById('round1').innerHTML = oneTurnScore;
-    $("#chang").attr("disabled", false);
-  })
 
-  $('#chang').click(function(){
-    store1();
-    finalize1();
-    celebrate();
-    oneRolls.length = 0;
-    document.getElementById('round1').innerHTML = oneTurnScore;
-    document.getElementById('total1').innerHTML = oneFinalTotal;
-    $("#cha").attr("disabled", true);
-    $("#chan").attr("disabled", false);
-    $("#chang").attr("disabled", true);
-    // $("#change").attr("disabled", false);
-  })
 
-  $('#chan').click(function(){
-    random2();
-    document.getElementById('round2').innerHTML = twoTurnScore;
-    $("#change").attr("disabled", false);
-  })
 
-  $('#change').click(function(){
+    $('#roll-up1').click(function(){
+      randomDieRoller1();
+      gather1();
+      document.getElementById('firstRound').innerHTML = rollerOneTurnScore;
+      $("#imobilize").attr("disabled", false);
+    })
+    $(document).ready(function() {
+      $(".begin").submit(function(event){
+        event.preventDefault();
+        var input1 = $("#one").val();
+        $("#arrange").text(input1);
+        var input2 = $("#two").val();
+        $("#short").text(input2);
+        $(".revealed").slideDown();
+        $("#rep").slideUp();
+      });
+
+    $('#imobilize').click(function(){
+      store1();
+      finalize1();
+      celebrate();
+      rollerOneRolls.length = 0;
+      document.getElementById('firstRound').innerHTML = rollerOneTurnScore;
+      document.getElementById('rollerOneTotal').innerHTML = rollerOneRoundTotal;
+      $("#roll-up1").attr("disabled", true);
+      $("#roll-up").attr("disabled", false);
+      $("#imobilize").attr("disabled", true);
+
+    })
+    $('#roll-up').click(function(){
+      randomDieRoller2();
+      document.getElementById('round2').innerHTML = rollerTwoTurnScore;
+      $("#imobilizee").attr("disabled", false);
+    })
+
+      $(".re-do").click(function(){
+        $(".revealed").slideUp();
+        $("#revealed").slideUp();
+        $("#rep").slideDown();
+      })
+
+
+  $('#imobilizee').click(function(){
     store2();
     finalize2();
     celebrate();
-    twoRolls.length = 0;
-    document.getElementById('round2').innerHTML = twoTurnScore;
-    document.getElementById('total2').innerHTML = twoFinalTotal;
-    $("#chan").attr("disabled", true);
-    $("#cha").attr("disabled", false);
-    $("#change").attr("disabled", true);
-    // $("#chang").attr("disabled", false);
+    rollerTwoRolls.length = 0;
+    document.getElementById('round2').innerHTML = rollerTwoTurnScore;
+    document.getElementById('rollerTwoTotal').innerHTML = rollerTwoRoundTotal;
+    $("#roll-up").attr("disabled", true);
+    $("#roll-up1").attr("disabled", false);
+    $("#imobilizee").attr("disabled", true);
+
   })
 })
 
 //Business logic
-var oneRolls = [];
-var twoRolls = [];
-var oneTurnScore = [];
-var twoTurnScore = [];
-var oneTurnTotal = [];
-var twoTurnTotal = [];
-var oneFinalTotal = [];
-var twoFinalTotal = [];
-var total1 = 0;
-var total2 = 0;
-var sum1 = 0;
-var sum2 = 0;
+var rollerOneRolls = [];
+var rollerTwoRolls = [];
+var rollerOneTurnScore = [];
+var rollerTwoTurnScore = [];
+var rollerOneTurnTotal = [];
+var rollerTwoTurnTotal = [];
+var rollerOneRoundTotal = [];
+var rollerTwoRoundTotal = [];
+var rollerOneTotal = 0;
+var rollerTwoTotal = 0;
+var summationA = 0;
+var summationB = 0;
 
-function random1(){
+function randomDieRoller1(){
   var number=Math.floor(Math.random()*6) + 1;
-  document.getElementById("1got").innerHTML=number;
+  document.getElementById("swag").innerHTML=number;
 
   if(number >1){
-    oneRolls.push(number);
-    sum1 = 0;
-    oneRolls.forEach(function(item1){
-      sum1 = sum1 + item1;
+    rollerOneRolls.push(number);
+    summationA = 0;
+    rollerOneRolls.forEach(function(item1){
+      summationA = summationA + item1;
     })
   }
   else{
-    oneRolls = [];
-    sum1 = 0;
+    rollerOneRolls = [];
+    summationA = 0;
     $(document).ready(function(){
-      $("#cha").attr("disabled", true);
-      $("#chan").attr("disabled", false);
-      $("#chang").attr("disabled", true);
-      // $("#change").attr("disabled", false);
+      $("#roll-up1").attr("disabled", true);
+      $("#roll-up").attr("disabled", false);
+      $("#imobilize").attr("disabled", true);
+      // $("#imobilizee").attr("disabled", false);
     })
   }
 }
 
-function random2(){
+function randomDieRoller2(){
   var number2=Math.floor(Math.random()*6) + 1;
-  document.getElementById("2got").innerHTML=number2;
+  document.getElementById("swag2").innerHTML=number2;
 
   if(number2 >1){
-    twoRolls.push(number2);
-    sum2 = 0;
-    twoRolls.forEach(function(item2){
-      sum2 = sum2 + item2;
+    rollerTwoRolls.push(number2);
+    summationB = 0;
+    rollerTwoRolls.forEach(function(item2){
+      summationB = summationB + item2;
     })
-    twoTurnScore.length = 0;
-    twoTurnScore.push(sum2);
-    document.getElementById('round2').innerHTML = twoTurnScore;
+    rollerTwoTurnScore.length = 0;
+    rollerTwoTurnScore.push(summationB);
+    document.getElementById('round2').innerHTML = rollerTwoTurnScore;
   }
   else{
-    twoRolls = [];
-    var sum2 = 0;
+    rollerTwoRolls = [];
+    var summationB = 0;
     $(document).ready(function(){
-      $("#change").attr("disabled", true);
-      // $("#chang").attr("disabled", false);
-      $("#chan").attr("disabled", true);
-      $("#cha").attr("disabled", false);
+      $("#imobilizee").attr("disabled", true);
+      // $("#imobilize").attr("disabled", false);
+      $("#roll-up").attr("disabled", true);
+      $("#roll-up1").attr("disabled", false);
     })
   }
 }
 
-//Player1
+//roller1
 function gather1(){
-  oneTurnScore.length = 0;
-  oneTurnScore.push(sum1);
+  rollerOneTurnScore.length = 0;
+  rollerOneTurnScore.push(summationA);
 }
 
 function store1(){
-  oneTurnTotal.push(parseInt(oneTurnScore));
-  oneTurnScore.length = 0;
+  rollerOneTurnTotal.push(parseInt(rollerOneTurnScore));
+  rollerOneTurnScore.length = 0;
 }
 
 function finalize1(){
-  total1 = 0;
-  oneTurnTotal.forEach(function(collect){
-    total1 = total1 + collect;
+  rollerOneTotal = 0;
+  rollerOneTurnTotal.forEach(function(collect){
+    rollerOneTotal = rollerOneTotal + collect;
   })
-  oneFinalTotal.length = 0;
-  oneFinalTotal.push(total1);
+  rollerOneRoundTotal.length = 0;
+  rollerOneRoundTotal.push(rollerOneTotal);
 }
 
-//Player 2
+//roller 2
 function gather2(){
-  twoTurnScore.length = 0;
-  twoTurnScore.push(sum2);
+  rollerTwoTurnScore.length = 0;
+  rollerTwoTurnScore.push(summationB);
 }
 
 function store2(){
-  twoTurnTotal.push(parseInt(twoTurnScore));
-  twoTurnScore.length = 0;
+  rollerTwoTurnTotal.push(parseInt(rollerTwoTurnScore));
+  rollerTwoTurnScore.length = 0;
 }
 
 function finalize2(){
-  total2 = 0;
-  twoTurnTotal.forEach(function(collect){
-    total2 = total2 + collect;
+  rollerTwoTotal = 0;
+  rollerTwoTurnTotal.forEach(function(collect){
+    rollerTwoTotal = rollerTwoTotal + collect;
   })
-  twoFinalTotal.length = 0;
-  twoFinalTotal.push(total2);
+  rollerTwoRoundTotal.length = 0;
+  rollerTwoRoundTotal.push(rollerTwoTotal);
 }
 
 function celebrate(){
-  if (twoFinalTotal >= 99){
+  if (rollerTwoRoundTotal >= 99){
   document.getElementById('written').innerHTML="Nice job "+input2+"!!you have won!!"
   }
-  else if(oneFinalTotal >= 99){
+  else if(rollerOneRoundTotal >= 99){
 document.getElementById('writing').innerHTML="Nice job"+input1+"!! You have won!!"
   }
 }

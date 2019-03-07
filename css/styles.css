@@ -1,51 +1,24 @@
-#column{
-margin-right:5em;
 
+* {
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
 }
 
-#container{
-  margin-right:20%;
-  margin-left:20%;
-}
-#all{
-  display: flex;
-  flex-direction:row;
-
-}
-.shown{
-  display:none;
-}
-#shown{
-  display:none;
-}
-*{
-
-font-family: 'Rancho', cursive;
-}
 body{
-  background-image:url("https://cdn57.androidauthority.net/wp-content/uploads/2018/09/android-authority-google-pixel-3-live-wallpaper-blue.jpg" );
-  background-repeat:no-repeat;
-  background-size:cover;
-  font-size:35px;
+  background-image: url("abstract-backdrop-background-921776.jpg");
+}
 
+
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
 }
-#make{
-  padding:20px;
-}
-#colum{
-  display:flex;
-  flex-direction: row;
-  margin-left:100px;
-}
-p{
-  color:black;
-}
-.green{
-color:black ;
-}
-#reduce{
-  border-radius:400px;
-}
-.move{
-  text-align:center;
-}
+ img{
+   border-radius: 20px;
+ }
+ .container{
+   background-color: #91C7BC;
+ }

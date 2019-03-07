@@ -1,94 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lobster|Rancho" rel="stylesheet">
-    <title>pig-dice</title>
-  </head>
+<head>
+	<title>pig-dice</title>
+</head>
+<body>
+	-
+	<link href="css/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 
-  <body>
-    <div id="container">
-      <div id="rep">
-        <div class="jumbotron">
-        <h1 id="reduce" >OINKY!!  PIG-DICE</h1>
-        <marquee><img src="https://media0.giphy.com/media/xgiqwcDgTh8hq/200w.webp?cid=3640f6095c7e812f6934514a4d839126" height=80></marquee>
-      </div>
-        <span class="super"></span>
-        <p>Let's get to know our lucky contestants first:</p>
-        <form class="doIt">
-        <div id="all">
-          <div class="jumbotron" id="column">
-            <img src="https://cdna.artstation.com/p/assets/images/images/011/471/494/large/luca-patane-img-20180623-104654-201.jpg?1529753828" height=240>
-            <br>Mastermind<input required type="name" id="one"></br>
-          </div>
-          <div class="jumbotron" id="column">
-            <img src="https://diversesurf.com.au/wp-content/gallery/model-logos/pp.jpg" height=200>
-            <br>Worthy opponent<input required type="name" id="two"></br>
-          </div>
-        </div>
-        <div>
-          <button type="submit" class="hidden">Play Game!</button>
-          <button type="reset">Clear names</button>
-          <button type="button" id="help">Help</button>
-        </div>
-        </form>
-      </div>
+  <div class="container">
+       <div class="jumbotron">
+			<img alt="roll" class="swag" src="images/dice.jpeg">
+			<h1 id="reduce">lets Roll</h1><span class="super"></span>
+			<p>let the games begin:</p>
+			<form class="begin">
+				<div id="all">
+					<br>
+					Roller1 Name:<input id="one" required="" type="name"><br>
+					<br>
+					Roller2 Name:<input id="two" required="" type="name"><br>
+					<div>
+						<button class="hidden" type="submit">start match!</button> <button type="reset">refresh signin</button>
+					</div>
+				</div>
+			</form>
+    </div>
+		<!-- </div>
+	</div> -->
 
-    <div id="shown" >
-      <h1>NEED HELP??</h1>
-      <p class="green">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
-      <div class="jumbotron">
-        <ul>
-          <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-          <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-          <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-          <li>The first player to score 100 or more points wins.</li>
-        </ul>
-      </div>
-      <div class="jumbotron">
-        <p class="green">For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.</p>
-        <button type="button" class="back">Back</button>
-      </div>
+	<div class="revealed">
+		<button disabled id="imobilize" type="button">hold</button> <button id="roll-up1" type="button">Roll dice</button>
+		<div>
+			<br>
+			dice face<br>
+			<div id="swag"></div>
+			<p>dice face total: <span id="firstRound"></span></p><br>
+			<br>
+			<p>current Score: <span id="rollerOneTotal"></span></p><br>
+		</div>
+		<button disabled id="imobilizee" type="button">hold</button> <button disabled id="roll-up" type="button">Roll dice</button> <!-- </div> -->
+	<!-- </div> -->
+	<p>dice face</p>
+	<div id="swag2"></div>
+	<p>dice face total: <span id="round2"></span></p><br>
+	<p>current Score: <span id="rollerTwoTotal"></span></p><br>
+	<button class="re-do" type="button">Re-start</button><br>
+
     </div>
 
-    <div id="link" class="shown">
-      <span class="move"><h1>Now let's get to business</h1></span>
-      <div id="colum">
-        <div id="make">
-          <p id="sort"></p>
-          <br><img src="https://cdna.artstation.com/p/assets/images/images/011/471/494/large/luca-patane-img-20180623-104654-201.jpg?1529753828" height=120></br>
-          <button type="button" id="chang" disabled>hold</button>
-          <button type="button" id="cha">Roll dice</button>
-         <div>
-          <br><p>points: <div id="1got"></div></p></br>
-
-          <br><p>Round Total: <span id="round1"></span></p></br>
-          <br><p>Gross Total: <span id="total1"></span></p></br>
-          <div id="writing"></div>
-        </div>
-        </div>
-
-        <div id="make">
-          <marquee><img src="images/hand.jpg" height=100></marquee>
-          <br><button type="button" class="back">Re-start</button></br>
-        </div>
-
-        <div id="make">
-          <p id="short"></p>
-          <br><img src="https://diversesurf.com.au/wp-content/gallery/model-logos/pp.jpg" height=120></br>
-          <button type="button" id="change" disabled>hold</button>
-          <button type="button" id="chan" disabled>Roll dice</button>
-        <div>
-          <br><p>points<div id="2got"></div></p></br>
-          <br><p>Round Total: <span id="round2"></span></p></br>
-          <br><p>Gross Total: <span id="total2"></span></p></br>
-          <br><div id="written"></div></br>
-        </div>
-        </div>
-        <script src="js/jquery-3.3.1.js"></script>
-        <script src="js/script.js"></script>
-      </div>
-    </div>
-  </body>
+	<script src="js/jquery-3.3.1.js">
+	</script>
+	<script src="js/script.js">
+	</script>
+</body>
 </html>
